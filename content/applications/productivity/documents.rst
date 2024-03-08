@@ -18,8 +18,8 @@ Configuration
 By going to :menuselection:`Documents --> Configuration --> Settings`, you can enable the
 centralization of files attached to a specific area of your activity. For example, by ticking
 :guilabel:`Human Resources`, your HR documents are automatically available in the HR workspace,
-while documents related to Payroll are automatically available in the Payroll sub-workspace . You
-can change the default workspace using the dropdown menu and edit its properties by clicking the
+while documents related to Payroll are automatically available in the Payroll sub-workspace. You can
+change the default workspace using the dropdown menu and edit its properties by clicking the
 internal link button (:guilabel:`➔`).
 
 .. image:: documents/files-centralization.png
@@ -48,6 +48,8 @@ page, fill in the following information:
 - :guilabel:`Parent Workspace`: if you want to create a sub-workspace, select its :guilabel:`Parent
   Workspace`
 
+.. _documents/tags:
+
 Tags
 ----
 
@@ -74,32 +76,42 @@ Description
 -----------
 
 You can add descriptive information to your workspace by going to :menuselection:`Documents -->
-Configuration --> Workspaces`, opening the workspace you want to describe and going to the
+Configuration --> Workspaces`, opening the workspace you want to describe, and going to the
 :guilabel:`Description` tab.
 
 .. note::
-   Workspaces can also be created and edited by clicking the gear icon :guilabel:`⚙` on the left
-   menu.
+   - Workspaces can also be created and edited by clicking the gear icon :guilabel:`⚙` on the left
+     menu.
 
-   .. image:: documents/sub-workspaces-creation.png
-      :alt: Create sub-workspaces from the left menu
+      .. image:: documents/sub-workspaces-creation.png
+         :alt: Create sub-workspaces from the left menu
+   - An **email alias** can be used to send documents to a specific workspace. You can also apply
+     :ref:`tags <documents/tags>` to these documents. To do so:
+
+     #. Select the tag and the corresponding workspace where the document should be directed in the
+        left column of your dashboard.
+
+     #. Next to the :guilabel:`Upload` button, click the down arrow, and then click
+        :guilabel:`Share`.
+
+     #. In the new window, click :guilabel:`Download and Upload` and enter the email alias where
+        documents should be sent.
 
 Documents management
 ====================
 
 When selecting or opening a document, the right panel displays different options. On the top,
 additional options might be available: :guilabel:`Download`, :guilabel:`Share`, :guilabel:`Replace`,
-:guilabel:`Lock` or :guilabel:`Split`. It is also possible to :guilabel:`Open chatter` or
-:guilabel:`Archive` the document.
+:guilabel:`Lock` or :guilabel:`Split`. It is also possible to :guilabel:`Open chatter` or use the
+:guilabel:`Move to trash` option.
 
 .. image:: documents/right-panel-options.png
    :align: center
    :alt: right panel options
 
-Then, you can modify the name of your file by clicking on :guilabel:`Document`. A
-:guilabel:`Contact` or an :guilabel:`Owner` can be assigned. The related :guilabel:`Workspace` can
-be modified and it is possible to access the related :guilabel:`Journal Entry` or add
-:guilabel:`Tags`.
+Then, you can modify the name of your file by clicking on :guilabel:`Name`. A :guilabel:`Contact` or
+an :guilabel:`Owner` can be assigned. The related :guilabel:`Workspace` can be modified, and it is
+possible to access the related :guilabel:`Journal Entry` or add :guilabel:`Tags`.
 
 .. note::
    - The :guilabel:`Contact` is the person related to the document and assigned to it. He can only
@@ -166,8 +178,8 @@ Document` column.
 Add a link
 ~~~~~~~~~~
 
-To add a link to your documents dashboard, click on :guilabel:`Add a Link`, enter the
-:guilabel:`URL`, and :guilabel:`Name` it.
+To add a link to your documents dashboard, click :guilabel:`Add a Link`, enter the :guilabel:`URL`,
+and :guilabel:`Name` it.
 
 Share
 ~~~~~
@@ -175,8 +187,8 @@ Share
 You can create a share link to a document or all documents of a workspace. It allows anyone to
 download the file(s) or upload files to a workspace.
 
-To do so, select the workspace or the document and click the arrow next to the :guilabel:`Upload`
-button then :guilabel:`Share`. On the pop-up, the share :guilabel:`URL` is displayed.
+To do so, select the workspace or the document, click the arrow next to the :guilabel:`Upload`
+button, and :guilabel:`Share`. On the pop-up, the share :guilabel:`URL` is displayed.
 :guilabel:`Copy` it to share it with anyone. :guilabel:`Name` the share link and set a validity date
 for the URL by filling in the :guilabel:`Valid Until` field. Tick the :guilabel:`Include Sub
 Folders` box if you also want to share a workspace's sub-folders. To let users upload their own
@@ -201,74 +213,51 @@ Workflow actions help manage documents and overall business operations. These ar
 that can be created and customized for each workspace. With a single click you can, for example,
 create, move, sign, and add tags to a document, and process bills.
 
-These workflow actions appear on the right panel when a document meets the set criteria.
+When a document meets the set criteria, these workflow actions appear on the right-side panel.
 
-Create workflow actions
------------------------
+.. image:: documents/workflow-action-example.png
+   :alt: Workflow actions available in the right-side panel.
+
+Create and edit workflow actions
+--------------------------------
 
 To create workflow actions, go to :menuselection:`Documents --> Configuration --> Actions` and click
-:guilabel:`New`.
+:guilabel:`New`. You can also select an existing action to edit it.
 
-.. note::
-   An action applies to all **sub-workspaces** under the :guilabel:`Related Workspace` you selected.
-
-Set the conditions
-------------------
-
-You can :guilabel:`Create` a new :guilabel:`Action` or edit an existing one. You can define the
-:guilabel:`Action Name` and then set the conditions that trigger the appearance of the action button
-(:guilabel:`▶`) on the right-side panel when selecting a file.
-
-There are three basic types of conditions you can set:
-
-#. :guilabel:`Tags`: you can use the :guilabel:`Contains` and :guilabel:`Does not contain`
-   conditions, meaning the files *must have* or *mustn't have* the tags set here.
-
-#. :guilabel:`Contact`: the files must be associated with the contact set here.
-
-#. :guilabel:`Owner`: the files must be associated with the owner set here.
-
-.. image:: documents/basic-condition-example.png
-   :alt: Example of a workflow action's basic condition in Odoo Documents
+First, define the :guilabel:`Action Name` and then set the conditions that trigger the appearance
+of the action button (:guilabel:`▶`) on the right-side panel when selecting a file by filling in the
+below sections.
 
 .. tip::
    If you don't set any conditions, the action button appears for all files inside the selected
    workspace.
 
-Advanced condition type: domain
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Conditions
+~~~~~~~~~~
 
-.. important::
-   It is recommended to have some knowledge of Odoo development to configure *Domain* filters
-   properly.
+Specify the :guilabel:`Related Workspace` to which the action applies. The action applies to all
+**sub-workspaces** beneath the one you have chosen in the :guilabel:`Related Workspace`.
 
-The :ref:`developer mode <developer-mode>` needs to be activated to access the :guilabel:`Domain`
-condition from the :guilabel:`Actions` tab. Once done, select the :guilabel:`Domain` condition type
-and click :guilabel:`Add condition`.
+Tags
+~~~~
 
-To create a rule, you typically select a :guilabel:`field`, an :guilabel:`operator`, and a
-:guilabel:`value`. For example, if you want to add a workflow action to all the PDF files inside a
-workspace, set the :guilabel:`field` to *Mime Type*, the :guilabel:`operator` to *contains*, and the
-pdf :guilabel:`value`.
+You can use the :guilabel:`Contains` and :guilabel:`Does not contain` conditions, meaning the files
+*must have* or *mustn't have* the tags set here.
 
-.. image:: documents/domain-condition-example.png
-   :alt: Example of a workflow action's domain condition in Odoo Documents
+Miscellaneous
+~~~~~~~~~~~~~
 
-Click :guilabel:`Add New Rule` (plus icon) and :guilabel:`Add branch` to add conditions and
-sub-conditions. You can then specify if your rule should match :guilabel:`all` or :guilabel:`any`
-conditions. You can also edit the rule directly using the :guilabel:`Code editor`.
+Add the :guilabel:`Contact` and the :guilabel:`Owner` with whom the files must be associated.
 
-Configure the actions
----------------------
+Actions
+~~~~~~~
 
-Select the :guilabel:`Actions` tab to set up your action. You can simultaneously:
+Set up your action. You can simultaneously:
 
-- **Set Contact**: add a contact to the file, or replace an existing contact with a new one.
-- **Set Owner**: add an owner to the file, or replace an existing owner with a new one.
 - **Move to Workspace**: move the file to any workspace.
 - **Create**: create one of the following items attached to the file in your database:
 
-   - **Link to record**: link the document to a record (i.e. link to a vehicle in Fleet);
+   - **Link to record**: link the document to a record (i.e., link to a vehicle in Fleet);
    - **Product template**: create a product you can edit directly;
    - **Task**: create a Project task you can edit directly;
    - **Signature PDF template**: create a new Sign template to send out;
@@ -285,15 +274,42 @@ Select the :guilabel:`Actions` tab to set up your action. You can simultaneously
    - **Miscellaneous Operations**: create a record in :guilabel:`Miscellaneous Operations`
      in Accounting;
    - **Bank Statement**: create a Bank Statement in Finance;
-   - **Expense**: create an expense automatically based on a file's content.
+   - **Purchase Receipt**: create a purchase receipt;
+   - **Expense**: create an expense.
 
+- **Set Contact**: add a contact to the file or replace an existing contact with a new one.
+- **Set Owner**: add an owner to the file or replace an existing owner with a new one.
 - **Set Tags**: add, remove, and replace any number of tags.
-- **Activities - Mark all as Done**: mark all activities linked to the file as done.
-- **Activities - Schedule Activity**: create a new activity linked to the file as configured in
-  the action. You can choose to set the activity on the document owner.
 
-.. image:: documents/workflow-action-example.png
-   :alt: Example of a workflow action Odoo Documents
+Activities
+~~~~~~~~~~
+
+- :guilabel:`Mark all as Done`: select to mark all activities linked to the file as done.
+- :guilabel:`Schedule Activity`: select to create a new activity linked to the file as configured in
+  the action.
+
+Advanced condition type: domain rule
+------------------------------------
+
+.. important::
+   It is recommended to have some knowledge of Odoo development to configure *Domain* filters
+   properly.
+
+The :ref:`developer mode <developer-mode>` needs to be activated to access the :guilabel:`Domain`
+condition in the :guilabel:`Conditions` section. Once done, select the :guilabel:`Domain` condition
+type and click :guilabel:`New Rule`.
+
+To create a rule, you typically select a :guilabel:`field`, an :guilabel:`operator`, and a
+:guilabel:`value`. For example, if you want to add a workflow action to all the PDF files inside a
+workspace, set the :guilabel:`field` to *Mime Type*, the :guilabel:`operator` to *contains*, and the
+pdf :guilabel:`value`.
+
+.. image:: documents/domain-condition-example.png
+   :alt: Example of a workflow action's domain condition in Odoo Documents.
+
+Click :guilabel:`Add New Rule` (plus icon) and :guilabel:`Add branch` to add conditions and
+sub-conditions. You can then specify if your rule should match :guilabel:`all` or :guilabel:`any`
+conditions. You can also edit the rule directly using the :guilabel:`Code editor`.
 
 Digitize documents with AI and optical character recognition (OCR)
 ==================================================================
