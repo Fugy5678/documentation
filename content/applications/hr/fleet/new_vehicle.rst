@@ -1,6 +1,6 @@
-===================
-Create new vehicles
-===================
+============
+New vehicles
+============
 
 Odoo's *Fleet* app manages all vehicles and the accompanying documentation that comes with vehicle
 maintenance and driver's records.
@@ -11,8 +11,13 @@ vehicle form is displayed in its current corresponding kanban stage. The default
 :guilabel:`New Request`, :guilabel:`To Order`, :guilabel:`Ordered`, :guilabel:`Registered`,
 :guilabel:`Downgraded`, :guilabel:`Reserve`, and :guilabel:`Waiting List`.
 
-To add a new vehicle to the fleet, click the :guilabel:`Create` button, and a blank vehicle form
-loads. Enter the vehicle information in the vehicle form, then click :guilabel:`Save`.
+.. note::
+   Depending on what other applications are or are not installed, some of these stages may not be
+   visible by default.
+
+To add a new vehicle to the fleet, click the :guilabel:`New` button in the top-left corner, and a
+blank vehicle form loads. Enter the vehicle information in the vehicle form. The form auto-saves as
+data is entered.
 
 Vehicle form fields
 ===================
@@ -25,9 +30,9 @@ Vehicle form fields
 
 .. note::
    The :guilabel:`Model` is the only required field on the new vehicle form. When a model is
-   selected, other fields will appear on the vehicle form, and relevant information will
-   auto-populate fields that apply to the model. If some of the fields do not appear, this may
-   indicate there is no model selected.
+   selected, other fields appear on the vehicle form, and relevant information auto-populate fields
+   that apply to the model. If some of the fields do not appear, this may indicate there is no model
+   selected.
 
 Driver section
 --------------
@@ -93,7 +98,7 @@ was added, where it is located, and who is managing it.
    :align: center
    :alt: The new vehicle form, showing the vehicle tax section.
 
-Tax Info tab
+Tax info tab
 ------------
 
 Fiscality
