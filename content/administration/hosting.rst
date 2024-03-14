@@ -59,6 +59,10 @@ Transferring an Odoo Online database
       Click the gear icon (:guilabel:`⚙`) next to the database name on the `Odoo Online database
       manager <https://www.odoo.com/my/databases/>`_ to display its version number.
 
+   .. warning::
+      If there is an active Odoo subscription linked to the database being migrated reach out to the
+      Account Manager or Customer Service Manager to complete the subscription transfer.
+
 To on-premise
 -------------
 
